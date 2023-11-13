@@ -16,7 +16,7 @@ function ShopManager:buyItem(plr, shop_item)
 	if not plr:GetAttribute(cost_item) or plr:GetAttribute(cost_item) >= cost then return false, "Insufficient funds" end
 	plr:SetAttribute(cost_item, plr:GetAttribute(cost_item) - cost)
 	shop_item.buy(plr)
-	return true, ""
+	return true
 end
 
 function ShopManager:addItem(item_name, item_quantity, cost_item, cost, bought_function)
@@ -47,7 +47,7 @@ function ShopManager:removeItem(item_name)
 		_G.shopItems[item_name] = nil
 		return true
 	end
-	return false
+	return false, "Item doesn't exist"
 end
 
 return ShopManager
