@@ -24,7 +24,11 @@ function ShopManager:addItem(item_name, item_quantity, cost_item, cost, bought_f
 	shop_item.cost_item = cost_item
 	shop_item.cost = cost
 	shop_item.buy = bought_function
+	_G.shopItems[item_name] = shop_item
 end
+
+function ShopManager:hasItem(item_name)
+		
 
 return ShopManager
 	
