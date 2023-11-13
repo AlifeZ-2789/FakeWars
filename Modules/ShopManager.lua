@@ -27,8 +27,19 @@ function ShopManager:addItem(item_name, item_quantity, cost_item, cost, bought_f
 	_G.shopItems[item_name] = shop_item
 end
 
+function ShopManager:getItem(item_name)
+	return _G.shopItems[item_name]
+end
+
 function ShopManager:hasItem(item_name)
-		
+	return ShopManager:getItem(item_name) ~= nil
+end
+
+function ShopManager:removeItem(item_name)
+	if ShopManager:hasItem(item_name) then
+		_G.shopItems[item_name] = nil
+	end
+end
 
 return ShopManager
 	
