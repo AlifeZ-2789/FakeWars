@@ -17,5 +17,5 @@ ShopEvent.OnServerEvent:Connect(function(plr, item_name)
 	else
 		print("Success!")
 	end
-end
+end)
 	
