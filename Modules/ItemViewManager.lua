@@ -1,3 +1,7 @@
-local module = {}
+local ItemViewManager = {}
 
-return module
+function ItemViewManager:getView(item_name)
+	
+end
+
+return ItemViewManager
