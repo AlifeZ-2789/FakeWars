@@ -14,3 +14,10 @@ end
 Buy.OnInvoke = function()
 	ShopEvent:FireServer(data.item_name)
 end
+
+local currentThread = coroutine.create(function()
+	while true do
+		task.wait()
+		
+	end
+end)
